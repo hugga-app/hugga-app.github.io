@@ -72,7 +72,9 @@ function App() {
         <section className="hero container card">
           <p className="kicker">Quiet infrastructure for hospitality</p>
           <h1>Better guest mornings, built on trust.</h1>
-          <p className="lead">Hugga is a curated hospitality layer connecting Airbnb hosts with vetted local breakfast providers. Built on reputation, designed for reliability.</p>
+          <p className="lead">
+            Hugga is a curated hospitality layer connecting Airbnb hosts with vetted local breakfast providers. Built on reputation, designed for reliability.
+          </p>
           <div className="actions">
             <a className="btn" href="#hosts">I&apos;m a Host</a>
             <a className="btn ghost" href="#providers">I&apos;m a Provider</a>
@@ -84,19 +86,18 @@ function App() {
           </ul>
         </section>
 
-        <section className="container block" id="sitemap">
-          <SectionTitle eyebrow="Structure" title="Sitemap" />
-          <ul className="tagline-list card">{sitemapItems.map((item) => <li key={item}>{item}</li>)}</ul>
-        </section>
-
         <section className="container block" id="pitch">
           <SectionTitle eyebrow="Pitch" title="One paragraph" />
           <article className="card">
-            <p>Hugga is a curated hospitality layer that helps Airbnb hosts offer trusted local breakfast through vetted providers. Guests add breakfast for €15 per person per night, providers receive €11, and Hugga keeps €4 as the marketplace agent fee. Hosts earn Hugga Credits, not cash, so incentives stay aligned with guest experience. The system is reputation-first: reliable providers get priority access while assignment remains fair through controlled randomness.</p>
+            <p>
+              Hugga is a curated hospitality layer that helps Airbnb hosts offer trusted local breakfast through vetted providers. Guests add breakfast for €15 per person per night, providers receive €11, and Hugga keeps €4 as the marketplace agent fee. Hosts earn Hugga Credits, not cash, so incentives stay aligned with guest experience. The system is reputation-first: reliable providers get priority access while assignment remains fair through controlled randomness.
+            </p>
           </article>
           <article className="card mt12">
             <h3>30-second script</h3>
-            <p>Most short-stay guests want a better morning, but hosts don’t want food logistics chaos. Hugga solves this with a quiet infrastructure layer: vetted local breakfast providers, integrated into the hosting experience. Guests pay €15 per person per night, providers receive €11, and Hugga operates as the marketplace agent. Hosts receive Hugga Credits to reinvest in hospitality.</p>
+            <p>
+              Most short-stay guests want a better morning, but hosts don’t want food logistics chaos. Hugga solves this with a quiet infrastructure layer: vetted local breakfast providers, integrated into the hosting experience. Guests pay €15 per person per night, providers receive €11, and Hugga operates as the marketplace agent. Hosts receive Hugga Credits to reinvest in hospitality.
+            </p>
           </article>
         </section>
 
@@ -185,52 +186,38 @@ function App() {
           <SectionTitle title="Hero options" subtitle="Alternative lead narratives from the source copy." />
           <div className="grid three">
             {heroOptions.map((hero) => (
-              <article className="card" key={hero.title}><h3>{hero.title}</h3><p>{hero.body}</p></article>
+              <article className="card" key={hero.title}>
+                <h3>{hero.title}</h3>
+                <p>{hero.body}</p>
+              </article>
             ))}
           </div>
         </section>
 
         <section className="container block" id="taglines">
           <SectionTitle title="Taglines" />
-          <ul className="tagline-list card">{taglines.map((tagline) => <li key={tagline}>{tagline}</li>)}</ul>
-        </section>
-
-        <section className="container block" id="microcopy">
-          <SectionTitle title="CTA and Microcopy" subtitle="UI labels and calls-to-action from the content blueprint." />
-          <div className="grid two">
-            <article className="card">
-              <h3>High-intent CTAs</h3>
-              <ul>
-                <li>Start a Conversation</li>
-                <li>Talk to Hugga</li>
-                <li>Apply as a Provider</li>
-                <li>Start Host Onboarding</li>
-              </ul>
-            </article>
-            <article className="card">
-              <h3>Trust labels</h3>
-              <ul>
-                <li>Vetted Provider</li>
-                <li>Reputation-weighted Assignment</li>
-                <li>Licensed &amp; Accountable</li>
-                <li>Hospitality-Specific Network</li>
-              </ul>
-            </article>
-          </div>
+          <ul className="tagline-list card">
+            {taglines.map((tagline) => <li key={tagline}>{tagline}</li>)}
+          </ul>
         </section>
 
         <section id="faq" className="container block">
           <SectionTitle title="FAQ" />
           <div className="grid two">
             {faqItems.map(([q, a]) => (
-              <article className="card" key={q}><h3>{q}</h3><p>{a}</p></article>
+              <article className="card" key={q}>
+                <h3>{q}</h3>
+                <p>{a}</p>
+              </article>
             ))}
           </div>
         </section>
 
         <section id="legal" className="container block">
           <SectionTitle title="Legal and operational clarity" />
-          <p className="card">Hugga acts as a marketplace agent connecting guests, hosts, and independent licensed breakfast providers. Providers are responsible for food production, safety, and regulatory compliance.</p>
+          <p className="card">
+            Hugga acts as a marketplace agent connecting guests, hosts, and independent licensed breakfast providers. Providers are responsible for food production, safety, and regulatory compliance.
+          </p>
         </section>
 
         <section id="contact" className="container block card center">
@@ -243,8 +230,7 @@ function App() {
         </section>
       </main>
     </>
-  )
-}
+
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
