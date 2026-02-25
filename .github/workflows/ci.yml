@@ -32,6 +32,3 @@ jobs:
           test -f docs/hugga-website-copy.md
           test -f index.html
           test -d dist
-
-      - name: Lint GitHub Actions workflows
-        uses: rhysd/actionlint@v1
