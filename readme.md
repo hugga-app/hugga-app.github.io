@@ -37,7 +37,8 @@ The React site currently includes:
 - `index.html` — Vite app shell.
 - `src/main.jsx` — page sections and website copy implementation.
 - `src/styles.css` — layout and visual styling.
-- `hugga-website-copy.md` — internal content/copy source.
+- `src/__tests__/` — Jest/Vitest test files.
+- `docs/` — Markdown documentation and content source files.
 - `.github/workflows/ci.yml` — build validation workflow (PR, push to `main`, manual trigger).
 - `.github/workflows/deploy-pages.yml` — GitHub Pages deployment workflow (push to `main`, manual trigger).
 
@@ -48,6 +49,7 @@ npm install
 npm run dev      # local development
 npm run build    # production build -> dist/
 npm run preview  # preview production build
+npm run test     # run test suite
 ```
 
 ## Local development
@@ -61,6 +63,18 @@ npm run preview  # preview production build
    npm run dev
    ```
 3. Open the local URL shown by Vite.
+
+## Testing
+
+Run tests with:
+```bash
+npm run test
+```
+
+Watch mode:
+```bash
+npm run test:watch
+```
 
 ## Build and deploy
 
@@ -79,7 +93,7 @@ Checks performed:
 
 ### Pages deployment (`.github/workflows/deploy-pages.yml`)
 
-Runs on:
+Runs on:docs/
 - Pushes to `main`
 - Manual run via **workflow_dispatch**
 
